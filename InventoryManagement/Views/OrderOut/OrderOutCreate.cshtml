@@ -1,0 +1,103 @@
+﻿
+@model InventoryManagement.Models.OrderOut
+
+
+<form method="post" asp-action="OrderOutCreate" asp-controller="OrderOut" enctype="multipart/form-data">
+<div class="content-page">
+    <div class="content">
+
+        <!-- Start Content-->
+        <div class="container-fluid">
+
+            <!-- start page title -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="page-title-box">
+                        <div class="page-title-right">
+                            <ol class="breadcrumb m-0">
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">Hyper</a></li>
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">OrderOut</a></li>
+                                <li class="breadcrumb-item active"> Create Order</li>
+                            </ol>
+                        </div>
+                        <h4 class="page-title">Create Order</h4>
+                    </div>
+                </div>
+            </div>
+            <!-- end page title -->
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+
+                            <div class="row">
+                                <div class="col-xl-6">
+
+                                    @* <div class="mb-3 position-relative" id="datepicker1">
+                                        <label class="form-label">Date</label>
+                                        <input asp-for="@Model.Date" type="date" class="form-control" data-provide="datepicker" data-date-container="#datepicker1" data-date-format="d-M-yyyy" data-date-autoclose="true">
+                                    </div> *@
+
+                                        <div class="mb-3">
+                                            <label for="example-select" class="form-label">Product/SKU</label>
+                                            <select asp-for="@Model.ProductSKU" class="form-select" id="example-select">
+                                                <option value="">--Select Product/SKU--</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                        </div>
+
+                                    <div class="mb-3">
+                                        <label for="projectname" class="form-label">Product Id</label>
+                                            <input asp-for="@Model.ProductId" type="text" id="projectname" class="form-control">
+                                    </div>
+
+                                        
+
+                                    @* <div class="mb-3">
+                                        <label for="projectname" class="form-label">Product/SKU</label>
+                                            <input asp-for="@Model.ProductSKU" type="text" id="projectname" class="form-control">
+                                    </div> *@
+
+                                    <div class="mb-3">
+                                        <label for="projectname" class="form-label">Quantity</label>
+                                            <input asp-for="@Model.Quantity" type="number" id="projectname" class="form-control">
+                                    </div>
+
+                                    <div class="btn-group mb-2 ms-2">
+                                            <button style="width:130px; font-size:large" type="submit" class="btn btn-primary btn-sm">Create</button>
+                                    </div>
+
+                                    
+
+                                    <!-- Date View -->
+                                    
+
+                                   
+
+                                    
+
+                                </div> <!-- end col-->
+
+
+                                
+                            </div>
+                            <!-- end row -->
+
+                        </div> <!-- end card-body -->
+                    </div> <!-- end card-->
+                </div> <!-- end col-->
+            </div>
+            <!-- end row-->
+
+        </div> <!-- container -->
+
+    </div> <!-- content -->
+    </div>
+</form>
+   
+

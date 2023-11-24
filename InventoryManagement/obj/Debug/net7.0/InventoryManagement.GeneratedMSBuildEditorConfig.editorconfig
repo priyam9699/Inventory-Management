@@ -1,0 +1,85 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = InventoryManagement
+build_property.RootNamespace = InventoryManagement
+build_property.ProjectDir = C:\Users\priyam\OneDrive\Desktop\software\InventoryManagement\InventoryManagement\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\priyam\OneDrive\Desktop\software\InventoryManagement\InventoryManagement
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/priyam/OneDrive/Desktop/software/InventoryManagement/InventoryManagement/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/priyam/OneDrive/Desktop/software/InventoryManagement/InventoryManagement/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/priyam/OneDrive/Desktop/software/InventoryManagement/InventoryManagement/Views/OrderOut/OrderOutCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJPdXRcT3JkZXJPdXRDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/priyam/OneDrive/Desktop/software/InventoryManagement/InventoryManagement/Views/OrderOut/OrderOutEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJPdXRcT3JkZXJPdXRFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/priyam/OneDrive/Desktop/software/InventoryManagement/InventoryManagement/Views/OrderOut/OrderOutIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJPdXRcT3JkZXJPdXRJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/priyam/OneDrive/Desktop/software/InventoryManagement/InventoryManagement/Views/Product/ProductCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxQcm9kdWN0Q3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/priyam/OneDrive/Desktop/software/InventoryManagement/InventoryManagement/Views/Product/ProductEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxQcm9kdWN0RWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/priyam/OneDrive/Desktop/software/InventoryManagement/InventoryManagement/Views/Product/ProductIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxQcm9kdWN0SW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/priyam/OneDrive/Desktop/software/InventoryManagement/InventoryManagement/Views/ReturnIn/ReturnInCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV0dXJuSW5cUmV0dXJuSW5DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/priyam/OneDrive/Desktop/software/InventoryManagement/InventoryManagement/Views/ReturnIn/ReturnInEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV0dXJuSW5cUmV0dXJuSW5FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/priyam/OneDrive/Desktop/software/InventoryManagement/InventoryManagement/Views/ReturnIn/ReturnInIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV0dXJuSW5cUmV0dXJuSW5JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/priyam/OneDrive/Desktop/software/InventoryManagement/InventoryManagement/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/priyam/OneDrive/Desktop/software/InventoryManagement/InventoryManagement/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/priyam/OneDrive/Desktop/software/InventoryManagement/InventoryManagement/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/priyam/OneDrive/Desktop/software/InventoryManagement/InventoryManagement/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/priyam/OneDrive/Desktop/software/InventoryManagement/InventoryManagement/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-c4618qd80j
+
+[C:/Users/priyam/OneDrive/Desktop/software/InventoryManagement/InventoryManagement/wwwroot/assets/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = d3d3cm9vdFxhc3NldHNcX0xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-cncym9pmua

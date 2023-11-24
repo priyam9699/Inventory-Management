@@ -1,0 +1,196 @@
+﻿@model IEnumerable<InventoryManagement.Models.Product>
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<body>
+    <!-- Begin page -->
+    <div class="wrapper">
+
+
+        
+
+        <div class="content-page">
+            <div class="content">
+
+                <!-- Start Content-->
+                <div class="container-fluid">
+
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box">
+                                @* <div class="page-title-right">
+                                    <ol class="breadcrumb m-0">
+                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Hyper</a></li>
+                                        <li class="breadcrumb-item"><a href="javascript: void(0);">CRM</a></li>
+                                        <li class="breadcrumb-item active">Orders List</li>
+                                    </ol>
+                                </div> *@
+                                <div class="page-title-right">
+                                    <form class="d-flex">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control form-control-light" id="dash-daterange">
+                                            <span class="input-group-text bg-primary border-primary text-white">
+                                                <i class="mdi mdi-calendar-range font-13"></i>
+                                            </span>
+                                        </div>
+                                        <a href="javascript: void(0);" class="btn btn-primary ms-2">
+                                            Export
+                                        </a>
+                                        
+                                    </form>
+                                </div>
+                                <h4 class="page-title">Product List</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end page title -->
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row mb-2">
+                                        <div class="col-xl-8">
+                                            <form asp-controller="Product" asp-action="ProductIndex" method="get" class="row gy-2 gx-2 align-items-center justify-content-xl-start justify-content-between">
+                                                <div class="col-auto">
+                                                    <label for="inputPassword2" class="visually-hidden">Search</label>
+
+                                                    <input type="search" class="form-control" id="inputPassword2" name="search" placeholder="Search...">
+
+                                                    @* <input type="search" class="form-control" id="inputPassword2" placeholder="Search..."> *@
+                                                </div>
+                                                <button style="width:auto"class="input-group-text btn btn-primary" type="submit">Search</button>
+                                                
+                                            </form>
+                                        </div>
+
+                                        <div class="col-xl-4">
+                                            <div class="text-xl-end mt-xl-0 mt-2">
+                                                <a style="margin-right:15px" asp-action="ProductCreate" asp-controller="Product" class="btn btn-primary"><i class="mdi mdi-plus-circle me-2"></i>Add New Product</a>
+                                                @* <a asp-action="ExportToPdf" asp-controller="Product" class="btn btn-danger mb-2 me-2"><i class="mdi mdi-basket me-1"></i>Export</a>
+                                                <button type="button" class="btn btn-light mb-2">Export</button> *@
+                                                
+                                                
+                                                @Html.ActionLink("Export to Excel", "ExportToExcel", "Product")
+                                             
+
+                                            </div>
+                                        </div><!-- end col-->
+                                    </div>
+                                    
+                                    <br />
+                                    
+
+                                    <div class="table-responsive">
+                                        <table class="table table-centered table-nowrap mb-0">
+                                            <thead class="table-light">
+                                                <tr>
+                                                    <th>
+                                                        Sr No.
+                                                    </th>
+                                                    <th>Date</th>
+                                                    <th>Product Name</th>
+                                                    <th>SKU</th>
+                                                    <th>Price</th>
+                                                    <th>Quantity</th>
+                                                    <th style="width: 125px;">Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @{
+                                                    int serialNumber = 1;
+                                                }
+                                               
+                                                @foreach (var product in Model)
+                                                {
+                                                    <tr>
+                                                        @* <td>
+                                                            <div class="form-check">
+                                                                <input type="checkbox" class="form-check-input" id="customCheck3" data-product-id="@product.Id">
+                                                                <label class="form-check-label" for="customCheck3">&nbsp;</label>
+                                                            </div>
+                                                        </td> *@
+                                                        <td>@serialNumber</td>
+                                                        <td>@product.Date</td>
+                                                        <td class="text-body fw-bold">@product.ProductName</td>
+                                                        <td>@product.SKU</td>
+                                                        <td>@product.Price</td>
+                                                        <td>@product.Quantity</td>
+                                                        <td>
+                                                            <a asp-action="ProductEdit" asp-route-id="@product.Id" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
+                                                            @* <a asp-action="ProductDelete" asp-controller="Product" asp-route-id="@product.Id" class="action-icon"> <i class="mdi mdi-delete"></i></a> *@
+                                                            @* <form method="post" asp-route-id="@product.Id" asp-action="ProductDelete" asp-controller="Product">
+                                                                <button type="submit"><i class="mdi mdi-delete"></i></button>
+                                                            </form> *@
+                                                            <a @* asp-action="ProductDelete" asp-controller="Product" *@ onclick="return deleteProduct(@product.Id)"> <i class="mdi mdi-delete"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    serialNumber++;
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div> <!-- end card-body-->
+                            </div> <!-- end card-->
+                        </div> <!-- end col -->
+                    </div> <!-- end row -->
+                </div> <!-- container -->
+            </div> <!-- content -->
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+    </div>
+
+
+    @section scripts {
+        <script>
+            function deleteProduct(productId) {
+                Swal.fire({
+                    title: "Are you sure?",
+                    text: "You won't be able to delete this!",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#3085d6",
+                    cancelButtonColor: "#d33",
+                    confirmButtonText: "Yes, delete it!"
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        // Perform a POST request using jQuery
+                        $.ajax({
+                            url: '/Product/ProductDelete',
+                            method: 'POST',
+                            data: { id: productId },
+                            success: function (response) {
+                                // Handle successful deletion
+                                Swal.fire("Deleted!", "Your product has been deleted.", "success");
+                                // You might want to redirect after successful deletion
+                                // window.location.href = '/Product/List';
+                            },
+                            error: function (xhr, status, error) {
+                                // Handle errors if any
+                                console.error('Error:', error);
+                                Swal.fire("Error", "Failed to delete the product.", "error");
+                            }
+                        });
+                    } else {
+                        Swal.fire("Cancelled", "Your action has been cancelled", "error");
+                    }
+                });
+                // Prevent the default action
+                return false;
+            }
+        </script>
+    }
+    
+</body>
+</html>
+
+  
